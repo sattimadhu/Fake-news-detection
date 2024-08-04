@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+</head>
+<body>
+    <div class="container">
+
+        <div class="box">
+            <div class="display">
+                {% if userinput %}
+                <div class="card">
+                    <p><span>News: </span>{{userinput}}</p>
+                    <p><span>Predicted as: </span>{{result}}</p>
+                    <p><span>Accuracy: </span>{{accuracy*100}}%</p>
+                </div>
+                {% endif %}
+            </div>
+            <div class="content">
+                <form action="/main" class="form"  method="post" id="page">
+                    <div class="inputBox">
+                    <a href="#" class="file"><ion-icon name="attach-outline"></ion-icon></i></a>
+                    <input type="text" class="textinput" name="text" placeholder="Enter text ...........">
+                    <button type="submit"></button>
+                    <a href="#" id="send"><ion-icon name="send-outline" class="send"></ion-icon></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/script.js"></script>
+    <script src="/static/js/scroll.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

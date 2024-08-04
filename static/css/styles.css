@@ -1,0 +1,116 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: #252526;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    width: 800px;
+    height: 100vh;
+}
+.display{
+    width: 100%;
+    height: 85%;
+    /* background-color: red; */
+    padding-top: 50px;
+}
+.content{
+    width: 100%;
+    /* background: #009578; */
+}
+form{
+    width: 100%;
+
+}
+.inputBox{
+    position: relative;
+}
+.textinput{
+    background: #37373d;
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    border-radius: 12px;
+    color:#8e8e8e97;
+    outline: none;
+    border: none;
+    position: absolute;
+    padding: 0px 0px 0px 50px;
+    z-index: 1;
+}
+::placeholder{
+    color: #8e8e8e97;
+    font-size: 20px;
+}
+/* button{
+    background: #009578;
+    position: absolute;
+    font-size: 16px;
+    font-weight: 600;
+    right: 0px;
+    width: 100px;
+    height: 60px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    display: none;
+    z-index: 100;
+} */
+.send{
+    color: #009675;
+    font-size: 30px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 110;
+}
+.file{
+    color: #009675;
+    font-size: 35px;
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    z-index: 110;
+    font-weight: 100;
+}
+.card{
+    width: 100%;
+    height: 400px;
+    overflow-y: auto;
+    background: #37373d;
+    padding: 30px;
+    border-radius: 10px;
+    color: #009675;
+}
+.card p span{
+    font-weight: 600;
+}
+.card p{
+    padding-bottom: 20px;
+}
+.card::-webkit-scrollbar {
+    width: 12px; /* Width of the entire scrollbar */
+}
+
+.card::-webkit-scrollbar-track {
+    background: #37373d; /* Background of the scrollbar track */
+    border-radius: 10px;
+}
+
+.card::-webkit-scrollbar-thumb {
+    background: #888; /* Background of the scrollbar thumb */
+    border-radius: 6px; /* Round corners */
+}
+
+.card::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Background of the scrollbar thumb on hover */
+}
