@@ -3,7 +3,18 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import accuracy_score, classification_report
-from fnd import preprocess_text, get_features
+import spacy
+nlp = spacy.load('en_core_web_sm')
+
+def preprocess_text(text):
+    text = ' '.join(text.split())
+    text = ''.join(char if char.isalnum() or char.isspace() else ' ' for char in text)
+    text = text.lower()
+    return text
+
+def get_features(text):
+    doc = nlp(text)
+    return [token.lemma_ for token in doc if not token.is_stop]
 
 fake = pd.read_csv('data\\fake.csv',nrows=500)
 real = pd.read_csv('data\\real.csv',nrows=500)

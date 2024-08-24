@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fake News Detection</title>
-    <link rel="stylesheet" href="/static/css/styles.css">
-    <link rel="stylesheet" href="{{url_for('static',)}}">
+    <!-- <link rel="stylesheet" href="/static/css/styles.css"> -->
+    <link rel="stylesheet" href="{{url_for('static',filename='/css/styles.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -28,7 +28,7 @@
                     <div class="inputBox">
                     <!-- <a href="#" class="file"><ion-icon name="attach-outline"></ion-icon></i></a> -->
                     <!-- <input type="file"> -->
-                    <input type="text" class="textinput" name="text" autocomplete="off" placeholder="Enter text ...........">
+                    <input type="text" class="textinput" name="text" autocomplete="off" placeholder="Enter your news here">
                     <button type="submit"></button>
                     <a href="#" id="send"><ion-icon name="send-outline" class="send"></ion-icon></a>
                     </div>
@@ -36,9 +36,9 @@
             </div>
         </div>
     </div>
-    <script src="/static/js/script.js"></script>
-    <script src="/static/js/scroll.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<!-- <script src="/static/js/script.js"></script> -->
+<script src="{{url_for('static',filename='/js/script.js')}}"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

@@ -40,15 +40,15 @@ form{
     height: 60px;
     font-size: 20px;
     border-radius: 12px;
-    color:#8e8e8e97;
+    color:#e0e0e0;
     outline: none;
     border: none;
     position: absolute;
-    padding: 0px 0px 0px 50px;
+    padding: 0px 60px 0px 25px;
     z-index: 1;
 }
 ::placeholder{
-    color: #8e8e8e97;
+    color: #e0e0e0d6;
     font-size: 20px;
 }
 /* button{
@@ -78,7 +78,7 @@ form{
     font-size: 35px;
     position: absolute;
     top: 12px;
-    left: 15px;
+    /* left: 15px; */
     z-index: 110;
     font-weight: 100;
 }
@@ -93,24 +93,26 @@ form{
 }
 .card p span{
     font-weight: 600;
+    color: #009675;
 }
 .card p{
     padding-bottom: 20px;
+    color: #e0e0e0;
 }
 .card::-webkit-scrollbar {
-    width: 12px; /* Width of the entire scrollbar */
+    width: 12px;
 }
 
 .card::-webkit-scrollbar-track {
-    background: #37373d; /* Background of the scrollbar track */
+    background: #37373d;
     border-radius: 10px;
 }
 
 .card::-webkit-scrollbar-thumb {
-    background: #888; /* Background of the scrollbar thumb */
-    border-radius: 6px; /* Round corners */
+    background: #009675;
+    border-radius: 6px;
 }
 
 .card::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Background of the scrollbar thumb on hover */
+    background: #008675;
 }
