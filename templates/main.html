@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fake News Detection</title>
     <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="{{url_for('static',)}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -25,7 +26,7 @@
             <div class="content">
                 <form action="/main" class="form"  method="post" id="page">
                     <div class="inputBox">
-                    <a href="#" class="file"><ion-icon name="attach-outline"></ion-icon></i></a>
+                    <!-- <a href="#" class="file"><ion-icon name="attach-outline"></ion-icon></i></a> -->
                     <!-- <input type="file"> -->
                     <input type="text" class="textinput" name="text" autocomplete="off" placeholder="Enter text ...........">
                     <button type="submit"></button>
