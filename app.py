@@ -2,9 +2,9 @@ from flask import Flask,render_template,redirect,request
 from main import predict_news,evaluation
 
 app=Flask(__name__)
-# @app.route('/')
-# def home():
-#     return render_template('index.html')
+@app.route('/')
+def home():
+    return render_template('index.html')
 @app.route('/main',methods=['GET','POST'])
 def main():
     if request.method=='POST':
