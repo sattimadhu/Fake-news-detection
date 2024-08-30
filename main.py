@@ -16,8 +16,8 @@ def get_features(text):
     doc = nlp(text)
     return [token.lemma_ for token in doc if not token.is_stop]
 
-fake = pd.read_csv('data\\fake.csv',nrows=500)
-real = pd.read_csv('data\\real.csv',nrows=500)
+fake = pd.read_csv('data\\fake.csv',nrows=50)
+real = pd.read_csv('data\\real.csv',nrows=50)
 fake['label'] = 0
 real['label'] = 1
 data = pd.concat([fake, real], ignore_index=True)

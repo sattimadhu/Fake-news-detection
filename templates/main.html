@@ -24,10 +24,12 @@
                 {% endif %}
             </div>
             <div class="content">
-                <form action="/main" class="form"  method="post" id="page">
+                <form action="/main" class="form"  method="post" id="page" enctype="multipart/form-data">
                     <div class="inputBox">
-                    <!-- <a href="#" class="file"><ion-icon name="attach-outline"></ion-icon></i></a> -->
-                    <!-- <input type="file"> -->
+                    <label for="file-upload">
+                    <ion-icon name="attach-outline" class="file"></ion-icon></i>
+                    </label>
+                    <input type="file" class="file_up" name="file" id="file-upload" accept=".pdf, .txt">
                     <input type="text" class="textinput" name="text" autocomplete="off" placeholder="Enter your news here">
                     <button type="submit"></button>
                     <a href="#" id="send"><ion-icon name="send-outline" class="send"></ion-icon></a>
