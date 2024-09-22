@@ -12,6 +12,7 @@ def home():
 def main():
     if request.method == 'POST':
         file = request.files.get('file')
+        inptxt = request.form.get('text')
         
         if file:
             if file.filename.endswith('.pdf'):
@@ -21,17 +22,10 @@ def main():
             else:
                 return render_template('main.html', result='Unsupported file type')
         else:
-            text = request.form.get('text', '').strip()
-
-        if isinstance(text, bytes):
-            text = text.decode('utf-8')
-
-        if ' ' not in text:
-            result = 'Not valid'
-        else:
-            result = predict_news(text)
-            accuracy, classify = evaluation()
-            return render_template('main.html', userinput=text, result=result, accuracy=accuracy)
+            text=inptxt
+        result = predict_news(text)
+        accuracy, classify = evaluation()
+        return render_template('main.html', userinput=text, result=result, accuracy=accuracy)
 
     return render_template('main.html')
 
